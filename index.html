@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+         h1 {text-align: center;}
+      </style>
+   </head>
+   <body>
+      <!-- BACKEND DEVELOPMENT -->
+      <div id="backend">
+         <h1>Backend</h1>
+      </div>
+      <div id="java">
+         <h2>Java--</h2>
+         <p>Jakarta and Javax are the enterprise versions of Java. </p>
+         <ul>
+            <li>Head First Java 2nd Edition: file:///C:/Users/cmpar/Downloads/Head%20First%20Java.pdf</li>
+            <li><a href="https://java-programming.mooc.fi/">University of Helsinki’s massive open online course (MOOC)</a></li>
+            <li><a href="https://leetcode.com/">LeetCode</a></li>
+            <li><a href="https://www.hackerrank.com/">HackerRank</a></li>
+            <li><a href="https://github.com/Nitin96Bisht/Java-Books/blob/master/Data%20Structures%20and%20Algorithms%20Made%20Easy%20in%20Java.pdf">JavaBooks GitHub Repo</a></li>
+            <li><a href="https://www.oracle.com/java/technologies/jdtt-jsp.html">Official Java Docs</a></li>
+            <li><a href="https://docs.oracle.com/en/java/javase/22/">Official Java Tutorials</a></li>
+            <li><a href="https://introcs.cs.princeton.edu/java/11cheatsheet/">Princeton Java Cheat Sheet</a></li>
+         </ul>
+         <h3>Concurrency</h3>
+         <h4>What is it, and what is the difference between Concurrency and Async Programming</h4>
+         <ol>
+            <li><b>Concurrency</b> is a broader concept that refers to the ability to handle multiple tasks apparently at the same time. This can be achieved in two main ways:<br>
+               <b>Parallelism:</b> This is where multiple tasks are genuinely running simultaneously on separate processors or cores.<br>
+               <b>Non-parallel concurrency:</b> This occurs even with a single processor. The tasks are still managed concurrently, but the CPU rapidly switches between them, creating the illusion of parallelism. <strong>This is often achieved using threads.</strong>
+            </li>
+            <li><b>Asynchronous programming</b> a specific technique used to achieve concurrency.<br>In asynchronous programming, a task is initiated but doesn't block the main thread while it's waiting to complete. The main thread can then move on to other tasks. When the asynchronous task finishes, it typically notifies the main thread through a callback function or similar mechanism.</li>
+            <li><b>Analogy</b></li>
+            <ul><b>Concurrency:</b> Imagine you have two chefs (threads) in a kitchen. Concurrency allows them to cook multiple dishes (tasks) at the same time (parallelism) or switch between chopping vegetables for one dish and preparing ingredients for another (non-parallel concurrency).<br></ul>
+            <ul><b>Asynchronous programming:</b> You order a pizza (initiate asynchronous task). 
+               You don't have to wait by the phone for the pizzeria to call (main thread doesn't block). 
+               You can answer emails or watch TV (do other tasks) In the meantime, the pizzeria calls you back (callback) 
+               when the pizza is ready (asynchronous task finishes).
+            </ul>
+            <ul><b>Async Example 2:</b>Uber Driver. Imagine Calling an Uber, then you can still do stuff until the uber driver gets there, then he lets you know.</ul>
+         </ol>
+         <h4>What are ways to achieve Concurrency?</h4>
+         <ol>
+            <li>Threads</li>
+            <li>Processes</li>
+            <li>Async Programming</li>
+            <li>Event Driven Programming</li>
+         </ol>
+      </div>
+      <div id="spring">
+         <h2>Spring Boot--</h2>
+         <p>Server Side Web Framework that makes it easy to create web applications by:</p>
+         <ol>
+            <li>Reducing Configurations w/ an "opinionated" approach</li>
+            <li>Embedded Tomcat Web Server</li>
+            <li>Providing Starter Dependencies</li>
+            <li>Production Ready Features out of the Box</li>
+         </ol>
+         <p>Spring Beans</p>
+         <p>Dependency Injection</p>
+         <ul>
+            <li>A form of IoC (Inversion of Control)</li>
+            <li>A technique that promotes loose coupling between modules, making your application more flexible and easier to test.</li>
+            <li>DI allows an object to receive its dependencies from an external source rather than creating them itself, promoting code reuse and separation of concerns.</li>
+            <li>In Spring Boot, DI is primarily achieved using annotations such as 
+                <b>@Autowired, @Component, @Service, @Repository, and @Controller.</b> Spring's IoC container is responsible for managing the lifecycle and configuration of application objects.</li>
+            <li><a href="https://chatgpt.com/share/06260f85-2472-43f2-9350-e3c92ae774e2">See here</a></li>
+            <li>Types:</li>
+            <ul>
+               <li> <b>Constructor injection: </b> 
+                  The injector supplies the dependency through the client class constructor. 
+                  This type of injection is the most widely used and indicates a required dependency between services and the class. 
+                  It's best used when a service is non-optional.
+               </li>
+               <li> <b>Setter injection: </b> 
+                  Also known as property injection, the injector method injects the dependency to the setter method exposed by the client. In PHP, this type of injection is more flexible than constructor injection because it allows you to set dependencies after the object has been created.
+               </li>
+               <li> <b>Interface injection </b> 
+                  The injector uses an interface to provide dependency to the client class. The client must implement an interface that exposes a setter method that accepts the dependency.
+               </li>
+               <li> <b>Field injection: </b> 
+                  Dependencies are injected directly into the class fields using reflection. This type of injection is generally discouraged because it can make the code harder to test and maintain, and can lead to tight coupling between classes.
+               </li>
+               <li> <b>Method injection: </b> 
+                  Dependencies are provided as parameters to the method that requires them.
+               </li>
+            </ul>
+         </ul>
+         <ul>
+            <li><a href="https://docs.spring.io/spring-boot/index.html">J Official Documentation</a></li>
+            <li><a href="https://www.jrebel.com/blog/spring-annotations-cheat-sheet">J Rebel Spring Annotations Cheat Sheet</a></li>
+            <li>PDF Version:  file:///C:/Users/cmpar/Downloads/cheatsheet-jrebel-spring-annotations.pdf</li>
+            <li><a href="https://dev.to/burakboduroglu/spring-boot-cheat-sheet-460c">Dev.to Spring Boot Cheat Sheet</a></li>
+            <li><a href="https://dev.to/burakboduroglu/hibernate-cheat-sheet-2dke">Dev.to Hibernate Cheat Sheet</a></li>
+            <li><a href="https://stackify.com/dependency-injection/">Stackify dependency-injection</a></li>
+         </ul>
+      </div>
+
+
+
+
+
+      <!-- FRONTEND DEVELOPMENT -->
+      <div id="frontend">
+         <h1>Frontend</h1>
+         <ul>
+            <li><a href="https://www.instagram.com/p/C63ky51y_Am/">Insta: Sites to practice frontend dev skills</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+         </ul>
+      </div>
+      <div id="javascript">
+         <h2>Javascript--</h2>
+         <p>Variables:</p>
+         <ul>
+            <li>Three types of variables: var, let, and const. Use Let.</li>
+            <li>Just stick to let (and const) for now. - The Odin Project</li>
+            <li>The var keyword is almost the same as let. It also declares a variable but in a slightly different, “old-school” way. - Javascript.info</li>
+            <li>Variables declared using const are called “constants”. They cannot be reassigned. An attempt to do so would cause an error - Javascript.info</li>
+            <li>Variables: Use const when you can, and use let when you have to. - MDN Docs</li>
+         </ul>
+         <p>Functions</p>
+         <p>Promises/Async Await</p>
+         <p>Resources:</p>
+         <ul>
+            <li><a href="https://javascript.info/">JavaScript.info</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+            <li><a href="https://leetcode.com/">LeetCode</a></li>
+         </ul>
+      </div>
+      <div id="React">
+         <h2>React--</h2>
+         <p>React.js, or simply React, is a free and open-source JavaScript library created by Meta, formerly Facebook, for building user interfaces (UI)  of web applications.<br>
+            It allows you to build complex UIs by breaking them down into smaller, reusable pieces called components. <br> Here are some key aspects of React:<br>
+         </p>
+         <ul>
+            <li>Component-based architecture: React applications are built using reusable components. These components are like independent building blocks that you can combine to create complex UIs.</li>
+            <li>JSX: React uses JSX, which is a syntax extension for JavaScript that allows you to write HTML-like structures within your code. This makes it easier to visualize and build UIs.</li>
+            <li>Virtual DOM: React uses a virtual DOM, which is an in-memory representation of the actual DOM. When changes are made to the UI, React efficiently updates the virtual DOM and then applies the minimal changes required to the real DOM. This improves performance.</li>
+            <li>React is a popular choice for building modern web applications due to its simplicity, flexibility, and performance.  Many large companies like Netflix, Facebook, and  New York Times use React for their web applications.</li>
+         </ul>
+         <h3>More Key Aspects:</h3>
+         <ul>
+            <li>Props: Propeties. Args passed to Components via HTML Attributes</li>
+            <li>Events: An action that signals user interaction or a system change. Events trigger functions you define to handle the user's interaction or state change</li>
+            <ul>
+               <li>Similar to DOM events in Vanilla JavaScript. Common examples include clicks, form submissions, key presses, or hovering over an element</li>
+               <li>Synthetic Events: React uses a concept called Synthetic Events. These are cross-browser wrappers around the native browser events, ensuring consistent behavior across different browsers.</li>
+               <li>Event Handlers: To respond to events, you create event handler functions. These functions are passed to React components using JSX syntax within curly braces (onClick={handleClick}).</li>
+            </ul>
+            <li>State</li>
+            <ul>
+               <li>In React, state is a JavaScript object that stores data specific to a component. This data can change over time, and whenever it does, the component re-renders to reflect the updated state.</li>
+               <li>Imagine a counter component that displays a number and has buttons to increment and decrement it. 
+                  The counter's value would be stored in the state object, and clicking the buttons would update the state using setState, 
+                  causing the component to re-render with the new count.
+               </li>
+            </ul>
+         </ul>
+         </ul>
+         <h3>Resources</h3>         
+         <ul>
+            <li><a href="https://www.w3schools.com/react/default.asp">React W3 Schools</a></li>
+            <li><a href="https://react.dev/learn">React Official Doc Tutorial</a></li>
+            <li><a href="https://www.theodinproject.com/paths/full-stack-javascript/courses/react">The Odin Project React Section</a></li>
+            <li><a href="https://devhints.io/react">Dev Hints React Cheat Sheet</a></li>
+            <li><a href="https://zerotomastery.io/cheatsheets/react-cheat-sheet/">Zero to Mastery: The Only React Cheat Sheet (+ PDF) You Need</a></li>
+         </ul>
+         <h3>React Instagram Posts</h3>
+         <ul>
+            <li><a href="https://www.instagram.com/p/C63uw4ZtD1o/?img_index=1">React: The Official Roadmap</a></li>
+            <li><a href="https://www.instagram.com/p/C5bGZltyn7a/">React Roadmap</a></li>
+            <li><a href="https://www.instagram.com/p/C3KbwxjrX-g/">7 React Hooks you must know</a></li>
+            <li><a href="https://www.instagram.com/p/C63tj90yOYh/">Axios With React.js</a></li>
+            <li><a href="https://www.instagram.com/p/C5_nMjEtm6D/">Write Better React JS</a></li>
+            <li><a href="https://www.instagram.com/p/C2T6OjrL__b/">Hooks in React</a></li>
+         </ul>
+      </div>
+   </body>
+</html>
