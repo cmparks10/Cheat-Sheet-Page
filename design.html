@@ -11,8 +11,27 @@
     <h2>How to determine what Context Boundaries</h2>
     <h2>What is a distributed system</h2>
     <h2>Discuss the two ways to scale a system</h2>
+    <ul>
+        <li>Horizontal - Adding more features to a single server</li>
+        <li>Vertical - Adding more servers</li>
+    </ul>
+
     <h2>Talk about deployment strategies</h2>
+
+    <dl>
+        <dt><b>Rolling Deployments</b>: Updates are gradually rolled out to a small subset of servers at a time. 
+            Once a batch is verified to be stable, the next batch is updated, and so on, until the entire fleet is on the new version.</dt>
+        <dd>- black hot drink</dd>
+        <dt><b>Canary Deployments</b> - A small percentage of users (canary group) are directed to the new version first.  
+            Performance and user feedback are closely monitored for the canary group before rolling out the update to a larger user base.</dt>
+        <dd>- white cold drink</dd>
+        <dt><b>Blue-Green Deployments:</b> Maintains two identical production environments (Blue and Green). The update is deployed to the Green environment first. 
+            Once thoroughly tested and validated, traffic is switched over from Blue to Green, effectively making the new version live.</dt>
+        <dd>- white cold drink</dd>
+      </dl>
+
     <h2>Discuss the different approaches with load balancing</h2>
+
     <h2>How can you handle increased traffic on a horizontally scaled system?</h2>
 
 
