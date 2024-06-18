@@ -1,164 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>MVC</h2>
-<h2>Aspect Oriented Programming</h2>
-<h2>DOM</h2>
-<h2>VDOM</h2>
-<h2>Test Driven Development</h2>
-<li><a href="https://www.browserstack.com/guide/what-is-test-driven-development">What is TDD</a>
-    <ul>
-      <li>Write Unit Tests before developing code.</li>
-      <li>Agile-born <b>iterative</b> approach</li>
-      <li>Three phases: Write Tests, Correct the Code, Refactor the code.</li>
-      <li>TDD is built around providing feedback at early stages, allowing Feedback Driven Development, allowing adaptability to changing requirements from the client.</li>
-      <li>JUnit is the Java used testing tool/framework. Each language has their own.</li>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+   <body>
+      <h2>MVC</h2>
+      <h2>Aspect Oriented Programming</h2>
+      <h2>DOM</h2>
+      <h2>VDOM</h2>
+      <h2>Test Driven Development</h2>
+      <li>
+         <a href="https://www.browserstack.com/guide/what-is-test-driven-development">What is TDD</a>
+         <ul>
+            <li>Write Unit Tests before developing code.</li>
+            <li>Agile-born <b>iterative</b> approach</li>
+            <li>Three phases: Write Tests, Correct the Code, Refactor the code.</li>
+            <li>TDD is built around providing feedback at early stages, allowing Feedback Driven Development, allowing adaptability to changing requirements from the client.</li>
+            <li>JUnit is the Java used testing tool/framework. Each language has their own.</li>
+         </ul>
+      </li>
+      <h2>Behavior Driven Development</h2>
+      <li>
+         <a href="https://www.browserstack.com/guide/what-is-bdd-testing"></a>
+         <ul>
+            <a href="https://en.wikipedia.org/wiki/Behavior-driven_development">wikipedia BDD</a>
+            <li>Naming software tests using <b>domain</b> language to describe the behavior of code. </li>
+            <li>Domain Specific Language, or <b>DSL</b> combined with natural language constructs (english)</li>
+            <li>Uses domain specific language using natural language constructs that an express the behavior and the expected outcomes</li>
+            <li>"Feature Files" are written in Gherkin, a syntax used to allow tools like Cucubmer to validate behaviors. Used to write Given/When/Then statements</li>
+            <li>Title, Narrative, and Acceptance Criteria, Feature, Description</li>
+            <li>Feature Files, Runners, Step Definitions</li>
+            <li>Also referred to as "Specification by Example"</li>
+         </ul>
+      </li>
+      <h2>Domain Driven Design</h2>
+      <p>Domain-Driven Design (DDD) is a software development approach that focuses on creating software that closely aligns with a particular business domain. It emphasizes understanding the domain's intricacies and complexities through close collaboration with domain experts. This understanding is then translated into a software model that reflects the domain's concepts and rules.</p>
+      <h3>Key Aspects of DDD</h3>
+      <ul>
+         <li><strong>Ubiquitous Language:</strong> DDD promotes a shared vocabulary between developers and domain experts. This common understanding helps ensure everyone is on the same page about the system's functionality and behavior.</li>
+         <li><strong>Domain Model:</strong> DDD centers around creating a domain model, a set of abstractions that capture the core entities, processes, and rules of the domain. This model serves as the foundation for the software design.</li>
+         <li><strong>Bounded Contexts:</strong> DDD acknowledges that complex systems can be broken down into smaller, more manageable subdomains. These subdomains, called bounded contexts, each have their own domain model that reflects their specific focus.</li>
+      </ul>
+      <h3>DDD Toolbox</h3>
+      <p>DDD provides a toolbox of concepts and patterns for building these domain models. Some common ones include:</p>
+      <ul>
+         <li><strong>Entities:</strong> Objects that have a unique identity and a lifecycle. For instance, in an e-commerce system, a "Product" could be an entity.</li>
+         <li><strong>Value Objects:</strong> Objects that don't have a unique identity but encapsulate a specific value. An example might be an "Address" within an order system.</li>
+         <li><strong>Aggregates:</strong> Groups of entities and value objects that are treated as a single unit. This helps manage data consistency.</li>
+         <li><strong>Domain Services:</strong> Classes that encapsulate complex business logic that doesn't neatly fit within an entity or value object.</li>
+      </ul>
+      <h3>Benefits of DDD</h3>
+      <p>By following these principles and leveraging these patterns, DDD aims to produce software that is:</p>
+      <ul>
+         <li><strong>More maintainable:</strong> The code reflects the domain concepts, making it easier to understand and modify.</li>
+         <li><strong>More adaptable:</strong> The focus on bounded contexts allows for easier evolution of the system as business needs change.</li>
+         <li><strong>More effective communication:</strong> The shared language fosters better collaboration between developers and domain experts.</li>
+      </ul>
+      <h2>Identifying Bounded Contexts</h2>
+      <p>As a software engineer, there are several ways to identify bounded contexts in DDD. Here are some key approaches:</p>
+      <h3>Understanding the Domain and its Complexity</h3>
+      <ul>
+         <li><strong>Domain Analysis:</strong> Deep dive into the problem space. This involves discussions with domain experts to understand the core functionalities, processes, and any existing organizational structures.</li>
+         <li><strong>Complexity:</strong> Identify areas of high complexity within the domain. Bounded contexts are often a good way to isolate and manage these complexities.</li>
+      </ul>
+      <h3>Ubiquitous Language and Team Ownership</h3>
+      <ul>
+         <li><strong>Conceptual Differences:</strong> Look for areas where the domain has different terminology or fundamentally different concepts. These could indicate boundaries between contexts.</li>
+         <li><strong>Team Ownership:</strong> Consider how the domain aligns with your development teams. Bounded contexts can reflect natural ownership boundaries for different teams.</li>
+      </ul>
+      <h3>Context Mapping</h3>
+      <p>This is a specific DDD pattern to identify and visualize bounded contexts. It involves:</p>
+      <ul>
+         <li>Identifying candidate contexts based on the above approaches.</li>
+         <li>Highlighting the relationships between them (shared data, dependencies etc.)</li>
+         <li>Deciding on the interaction style between contexts (e.g., Database sharing, API calls).</li>
+      </ul>
+      <p>Remember: There's no one-size-fits-all solution. The ideal granularity of bounded contexts depends on your specific project and its needs.</p>
+
+
+
+      <h1 style="text-align: center;">Inventory System with Domain-Driven Design (DDD)</h1>
+      <p>This document outlines a possible approach to designing an inventory system for a shoe company using Domain-Driven Design (DDD). DDD helps us model the core functionalities and terminology of the business domain into software.</p>
+    
+      <h2>Bounded Contexts</h2>
+      <p>A core concept in DDD is the Bounded Context (BC). A BC represents a specific area of the domain with its own set of responsibilities and rules. Here, we can identify three main BCs for our inventory system:</p>
+    
+      <ul>
+        <li>
+          <h3>Product Management</h3>
+          <p>This BC is focused on defining and managing information about shoe styles (brand, model, material, color, sizes).</p>
+          <ul>
+            <li>This BC might not be directly involved in the inventory system itself, but acts as a source of product data.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Inventory Management</h3>
+          <p>This is the core BC for our system, responsible for maintaining accurate stock data.</p>
+          <ul>
+            <li>This BC interacts with other BCs like Order Fulfillment to fulfill orders.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Order Fulfillment</h3>
+          <p>This BC processes customer orders and ensures efficient picking, packing, and shipping of shoes.</p>
+          <ul>
+            <li>This BC interacts with Inventory Management to retrieve stock information and fulfill orders.</li>
+          </ul>
+        </li>
+      </ul>
+    
+      <h2>Ubiquitous Language</h2>
+      <p>Developing a shared vocabulary (Ubiquitous Language) is crucial in DDD. Here are some key terms specific to our shoe company inventory system:</p>
+    
+      <ul>
+        <li>Shoe: A specific style of shoe with unique attributes like brand, model, material, and color.</li>
+        <li>SKU (Stock Keeping Unit): A unique identifier for a specific shoe considering size and other variations (e.g., colorway, width).</li>
+        <li>Warehouse: A location for storing bulk shoe inventory.</li>
+        <li>Store: A retail location selling shoes to customers.</li>
+        <li>Stock Level: The quantity of a specific SKU available at a particular location.</li>
+      </ul>
+    
+      <h2>Core Building Blocks</h2>
+      <p>DDD utilizes several building blocks to model the domain. Here's how they apply to our system:</p>
+    
+      <h3>Entities</h3>
+      <p>These are objects with a unique identity that persist over time.  In our case:</p>
+      <ul>
+        <li>Shoe: Represents a unique shoe style with its attributes (brand, model, material, color).</li>
+        <li>SKU: Represents a specific variant of a shoe considering size and possibly other variations.</li>
+      </ul>
+    
+      <h3>Value Objects</h3>
+      <p>These are immutable objects that describe entities but don't have their own independent identity.  Examples include:</p>
+      <ul>
+        <li>Size: Represents a specific shoe size (e.g., US 8, EU 41).</li>
+        <li>Color: Represents the color of a shoe (e.g., red, blue).</li>
+        <li>Location: Represents the specific warehouse or store where inventory is held (can include address details).</li>
+      </ul>
+    
+      <h3>Aggregates</h3>
+      <p>These are groups of related entities treated as a single unit for consistency purposes.  Here:</p>
+      <ul>
+        <li>Inventory Item: Combines an SKU and a Location, acting as the aggregate root.  It holds the current stock level for that specific SKU at that location.</li>
+      </ul>
+    
+      <h3>Domain Services</h3>
+      <p>These are operations that implement complex business logic but don't belong to any specific entity.  Examples:</p>
+      <ul>
+        <li>Stock Transfer: Orchestrates the movement of inventory between warehouses or stores, updating stock levels accordingly.</li>
+        <li>Low Stock Alert: Checks inventory levels and triggers alerts for SKUs nearing depletion.</li>
+        <li>Receive Shipment: Processes incoming shipments of shoes, updating stock levels for received SKUs.</li>
     </ul>
-  </li>
-<h2>Behavior Driven Development</h2>
-<li><a href="https://www.browserstack.com/guide/what-is-bdd-testing"></a>
-    <ul>
-        <a href="https://en.wikipedia.org/wiki/Behavior-driven_development">wikipedia BDD</a>
-        <li>Naming software tests using <b>domain</b> language to describe the behavior of code. </li>
-        <li>Domain Specific Language, or <b>DSL</b> combined with natural language constructs (english)</li>
-        <li>Uses domain specific language using natural language constructs that an express the behavior and the expected outcomes</li>
-        <li>"Feature Files" are written in Gherkin, a syntax used to allow tools like Cucubmer to validate behaviors. Used to write Given/When/Then statements</li>
-        <li>Title, Narrative, and Acceptance Criteria, Feature, Description</li>
-        <li>Feature Files, Runners, Step Definitions</li>
-        <li>Also referred to as "Specification by Example"</li>
-    </ul>
-</li>
-<h2>Domain Driven Design</h2>
-<h2>Acceptance Test Driven Development</h2>
-<h2>Unit Tests</h2>
-<h2>Integration Tests</h2>
-<h2>End to End Tests</h2>
-<h2>Smoke Testing</h2>
-<h2>Automation Testing</h2>
-<h2>Regression Testing</h2>
-<h2>Stateless</h2>
-<h2></h2>
-<h2>Securing Your APIs</h2>
-<ul>
-  <li>**Authentication and Authorization:**
-    <ul>
-      <li>Implement strong authentication (API keys, OAuth, JWT, LDAP, SSO, SAML, MFA, IAM)</li>
-      <li>Enforce authorization based on user roles and permissions</li>
-    </ul>
-  </li>
-  <li>**Data Protection:**
-    <ul>
-      <li>Use HTTPS to encrypt communication</li>
-      <li>Validate and sanitize user inputs to prevent injection attacks</li>
-    </ul>
-  </li>
-  <li>**Rate Limiting and Monitoring:**
-    <ul>
-      <li>Limit requests per user/IP address to prevent DoS attacks</li>
-      <li>Monitor API activity for suspicious patterns</li>
-    </ul>
-  </li>
-  <li>**Additional Measures:**
-    <ul>
-      <li>Consider using an API Gateway for centralized management</li>
-      <li>Keep your API software and dependencies up-to-date</li>
-    </ul>
-  </li>
-</ul>
-
-<h1>Securing Your APIs</h1>
-<p>APIs are gateways to your data and functionalities. Here's how to ensure their security:</p>
-
-<h2>Authentication vs. Authorization</h2>
-<p>While used together, authentication and authorization serve distinct purposes:</p>
-
-<h3>Authentication</h3>
-<ul>
-  <li><strong>Purpose:</strong> Verifies user/application identity (Who are you?)</li>
-  <li><strong>Methods:</strong>
-    <ul>
-      <li>API Keys (unique identifiers included in request headers)</li>
-      <li>OAuth (industry standard for third-party app access)</li>
-      <li>JWT (JSON Web Tokens: compact, self-contained tokens with user info)</li>
-    </ul>
-  </li>
-</ul>
-
-<h3>Authorization</h3>
-<ul>
-  <li><strong>Purpose:</strong> Determines user/application permissions after authentication (What are you allowed to do?)</li>
-  <li><strong>Process:</strong>
-    <ul>
-      <li>Checks user roles and permissions associated with their account.</li>
-      <li>Can be implemented at different API levels (resource, operation, etc.).</li>
-    </ul>
-  </li>
-</ul>
-
-<p><strong>Analogy:</strong> Imagine an API as a secure building.</p>
-<ul>
-  <li>Authentication is like verifying ID at the entrance (confirms identity).</li>
-  <li>Authorization is like checking an access badge (determines access areas).</li>
-</ul>
-
-<h2>Importance of Both</h2>
-<ul>
-  <li>Strong authentication ensures only authorized users/applications access the API.</li>
-  <li>Proper authorization restricts authenticated users to permitted actions, preventing unauthorized data access or modifications.</li>
-</ul>
-
-<h2>Additional Considerations</h2>
-<ul>
-  <li>Choose the authentication method that best suits your API's needs.</li>
-  <li>Regularly review and update user roles and permissions.</li>
-  <li>Implement mechanisms to revoke compromised tokens or API keys.</li>
-</ul>
-
-<h2>JWT vs. Bearer Token</h2>
-<p>While related, JWTs and bearer tokens are not identical:</p>
-
-<h3>Bearer Token</h3>
-<ul>
-  <li>Simple authorization mechanism: a string granting access to the bearer.</li>
-  <li>Doesn't contain user information or permissions itself.</li>
-  <li>JWT is a popular secure format for bearer tokens.</li>
-</ul>
-
-<h3>JWT (JSON Web Token)</h3>
-<ul>
-  <li>Specific format for secure tokens containing claims (user info, permissions, expiration).</li>
-  <li>Self-contained (JSON format with a signature for verification).</li>
-  <li>Well-suited for implementing bearer token authorization.</li>
-</ul>
-
-<p><strong>Analogy:</strong></p>
-<ul>
-  <li>Bearer token: Like a key granting access.</li>
-  <li>JWT: Like a keycard with encoded information (user ID, expiration).</li>
-</ul>
-
-<h2>JWT Generation</h2>
-<p>JWTs are typically generated on the server-side after successful user authentication.</p>
-
-<p>Here's a simplified breakdown:</p>
-<ol>
-  <li><strong>User Login:</strong> User enters credentials.</li>
-  <li><strong>Authentication:</strong> Server validates user credentials.</li>
-  <li><strong>Claims Creation:</strong> Server creates claims (data) for the JWT including user ID, issuer, audience, expiration, and custom claims.</li>
-  <li><strong>Signing:</strong> Server signs the header and payload (encoded claims) with a secret key for integrity and authenticity.</li>
-  <li><strong>JWT Formation:</strong> Header, payload, and signature are base64url encoded and concatenated to form the JWT string.</li>
-  <li><strong>Token Delivery:</strong> Server sends the JWT back to the client application (often stored locally).</li>
-</ol>
+  
+    <p>Remember, this is a basic example, and the specific DDD elements will depend on the complexities of your shoe company's inventory system.</p>
+      <h2>Acceptance Test Driven Development</h2>
 
 
-<h2>Security Concepts in General</h2>
-<a href="https://www.wallarm.com/what/oauth-vs-jwt-detailed-comparison">OAuth vs JWT</a>
-<a href="https://stackoverflow.com/questions/39909419/what-are-the-main-differences-between-jwt-and-oauth-authentication">Stack Overflow</a>
+      <h2>Unit Tests</h2>
+      <p>Testing a small individual component, unit, module, etc in isolation to validate expected behavior</p>
+      <p>Java uses Junit, and Mockito for stubbing and mocking out external calls.</p>
+      <p>It is not a unit test if it (as per Michael Feathers):</p>
+      <ul>
+        <li>Talks to a db</li>
+        <li>Communicates across the network</li>
+        <li>Touches the file system</li>
+        <li>If it cant run at the same time as any of your other unit tests</li>
+        <li>You have to do special things to your enviornment in order to get it to work</li>
+      </ul>
 
-</body>
+
+      <h2>Integration Tests</h2>
+      <ul>
+        <li>Testing components together, those components being already unit tested. How they work together as a whole.</li>
+        <li>you dont want to use mocks at this part.</li>
+        <li>Prior to end to end tests</li>
+        <li>Brick vs Wall</li>
+      </ul>
+
+
+
+
+      <h2>Functional Testing</h2>
+      <p>Tests a given feature of an application from the perspective of the user/according to specifications</p>
+      <p>Like integration testing, requires actual integration of the user.</p>
+      <p>Types of Functional Tests:</p>
+      <ul>
+        <li>Smoke Testing: AKA Build Verification Testing or Confidence Testing, makes sure the new build is bug free or not.</li>
+        <ul>
+            <li>Basic tests to ensure core functionalities work after a new build or minor changes</li>
+        </ul>
+        <li>Sanity Testing: AKA Sanity Check Testing. Done before regression testing. A deeper dive into areas impacted by changes.</li>
+        <ul>    
+            <li>Checks critical features to confirm the software is stable enough for further testing</li>
+            <li>Checks critical functionalities before in depth testing</li>
+            <li>If Smoke is Breadth, Sanity is Depth</li>
+            <li>A in depth type of white box testing</li>
+        </ul>
+        <li>Regression Testing: Ensures existing functionalities havent broken after code changes.</li>
+        <li>API Testing</li>
+        <li>GUI Testing</li>
+      </ul>
+      <h2>End to End (E2E) Tests</h2>
+      <ul>
+        <li>Horizontal and Vertical</li>
+      </ul>
+
+      <h2>Black Box Testing</h2>
+      <h2>White Box Testing</h2>
+
+      <h2>Automation Testing</h2>
+      <ul>
+        <li>Using software tools to automate a human driven manual process of reviewing and validating a software product</li>
+        <li></li>
+      </ul>
+
+      <h2>Extreme Programming</h2>
+      <h2>Stateless</h2>
+      <h2></h2>
+      <h2>Securing Your APIs</h2>
+      <ul>
+         <li>
+            **Authentication and Authorization:**
+            <ul>
+               <li>Implement strong authentication (API keys, OAuth, JWT, LDAP, SSO, SAML, MFA, IAM)</li>
+               <li>Enforce authorization based on user roles and permissions</li>
+            </ul>
+         </li>
+         <li>
+            **Data Protection:**
+            <ul>
+               <li>Use HTTPS to encrypt communication</li>
+               <li>Validate and sanitize user inputs to prevent injection attacks</li>
+            </ul>
+         </li>
+         <li>
+            **Rate Limiting and Monitoring:**
+            <ul>
+               <li>Limit requests per user/IP address to prevent DoS attacks</li>
+               <li>Monitor API activity for suspicious patterns</li>
+            </ul>
+         </li>
+         <li>
+            **Additional Measures:**
+            <ul>
+               <li>Consider using an API Gateway for centralized management</li>
+               <li>Keep your API software and dependencies up-to-date</li>
+            </ul>
+         </li>
+      </ul>
+      <h1>Securing Your APIs</h1>
+      <p>APIs are gateways to your data and functionalities. Here's how to ensure their security:</p>
+      <h2>Authentication vs. Authorization</h2>
+      <p>While used together, authentication and authorization serve distinct purposes:</p>
+      <h3>Authentication</h3>
+      <ul>
+         <li><strong>Purpose:</strong> Verifies user/application identity (Who are you?)</li>
+         <li>
+            <strong>Methods:</strong>
+            <ul>
+               <li>API Keys (unique identifiers included in request headers)</li>
+               <li>OAuth (industry standard for third-party app access)</li>
+               <li>JWT (JSON Web Tokens: compact, self-contained tokens with user info)</li>
+            </ul>
+         </li>
+      </ul>
+      <h3>Authorization</h3>
+      <ul>
+         <li><strong>Purpose:</strong> Determines user/application permissions after authentication (What are you allowed to do?)</li>
+         <li>
+            <strong>Process:</strong>
+            <ul>
+               <li>Checks user roles and permissions associated with their account.</li>
+               <li>Can be implemented at different API levels (resource, operation, etc.).</li>
+            </ul>
+         </li>
+      </ul>
+      <p><strong>Analogy:</strong> Imagine an API as a secure building.</p>
+      <ul>
+         <li>Authentication is like verifying ID at the entrance (confirms identity).</li>
+         <li>Authorization is like checking an access badge (determines access areas).</li>
+      </ul>
+      <h2>Importance of Both</h2>
+      <ul>
+         <li>Strong authentication ensures only authorized users/applications access the API.</li>
+         <li>Proper authorization restricts authenticated users to permitted actions, preventing unauthorized data access or modifications.</li>
+      </ul>
+      <h2>Additional Considerations</h2>
+      <ul>
+         <li>Choose the authentication method that best suits your API's needs.</li>
+         <li>Regularly review and update user roles and permissions.</li>
+         <li>Implement mechanisms to revoke compromised tokens or API keys.</li>
+      </ul>
+      <h2>JWT vs. Bearer Token</h2>
+      <p>While related, JWTs and bearer tokens are not identical:</p>
+      <h3>Bearer Token</h3>
+      <ul>
+         <li>Simple authorization mechanism: a string granting access to the bearer.</li>
+         <li>Doesn't contain user information or permissions itself.</li>
+         <li>JWT is a popular secure format for bearer tokens.</li>
+      </ul>
+      <h3>JWT (JSON Web Token)</h3>
+      <ul>
+         <li>Specific format for secure tokens containing claims (user info, permissions, expiration).</li>
+         <li>Self-contained (JSON format with a signature for verification).</li>
+         <li>Well-suited for implementing bearer token authorization.</li>
+      </ul>
+      <p><strong>Analogy:</strong></p>
+      <ul>
+         <li>Bearer token: Like a key granting access.</li>
+         <li>JWT: Like a keycard with encoded information (user ID, expiration).</li>
+      </ul>
+      <h2>JWT Generation</h2>
+      <p>JWTs are typically generated on the server-side after successful user authentication.</p>
+      <p>Here's a simplified breakdown:</p>
+      <ol>
+         <li><strong>User Login:</strong> User enters credentials.</li>
+         <li><strong>Authentication:</strong> Server validates user credentials.</li>
+         <li><strong>Claims Creation:</strong> Server creates claims (data) for the JWT including user ID, issuer, audience, expiration, and custom claims.</li>
+         <li><strong>Signing:</strong> Server signs the header and payload (encoded claims) with a secret key for integrity and authenticity.</li>
+         <li><strong>JWT Formation:</strong> Header, payload, and signature are base64url encoded and concatenated to form the JWT string.</li>
+         <li><strong>Token Delivery:</strong> Server sends the JWT back to the client application (often stored locally).</li>
+      </ol>
+      <h2>Security Concepts in General</h2>
+      <a href="https://www.wallarm.com/what/oauth-vs-jwt-detailed-comparison">OAuth vs JWT</a>
+      <a href="https://stackoverflow.com/questions/39909419/what-are-the-main-differences-between-jwt-and-oauth-authentication">Stack Overflow</a>
+   </body>
 </html>
