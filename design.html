@@ -31,6 +31,15 @@
       </dl>
 
     <h2>Discuss the different approaches with load balancing</h2>
+    <dl>
+        <dt><b>Static Load Balancing Algorithms</b>: Keep things simple: Static algorithms don't consider the current workload on servers. They rely on pre-defined rules to distribute traffic.</dt>
+        <dd>- Round Robin: Requests are sent to servers in a circular fashion, ensuring a fair distribution of traffic.</dd>
+        <dd>- Random: Requests are randomly assigned to any available server.</dd>
+        <dt><b>Dynamic Load Balancing Algorithms:</b>:More intelligent: These algorithms take real-time server health and workload into account when distributing traffic.</dt>
+        <dd>- Least Connections: Sends requests to the server with the fewest active connections, aiming for even workload distribution.</dd>
+        <dd>- Source IP Hash: Uses the client's IP address to determine the destination server. This ensures users are connected to the same server for consistent sessions.</dd>
+        <dd>- Resource-Based: Analyzes server resources like CPU and memory usage to distribute traffic to servers with enough capacity.</dd>
+      </dl>
 
     <h2>How can you handle increased traffic on a horizontally scaled system?</h2>
 
