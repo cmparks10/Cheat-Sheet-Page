@@ -10,36 +10,27 @@
 
 
    <ul class="navbar">
-      <!-- <li class="navbarList"><a href="#home">Home</a></li>
-      <li class="navbarList"><a href="#news">News</a></li> -->
-      
-
       <li class="dropdown">
          <a href="javascript:void(0)" class="dropbtn">Home</a>
          <div class="dropdown-content">
-
-            <a href="https://cmparks10.github.io/Cheat-Sheet-Page/index.html">github</a>
+            <a href="index.html">github</a>
          </div>
       </li>
-
       <li class="dropdown">
          <a href="javascript:void(0)" class="dropbtn">New Stuff to Learn</a>
          <div class="dropdown-content">
-
-            <a href="https://cmparks10.github.io/Cheat-Sheet-Page/newterms.html">github</a>
+            <a href="newterms.html">github</a>
          </div>
       </li>
-
-
       <li class="dropdown">
-         <a href="javascript:void(0)" class="dropbtn">System Design and Higher Level Questions</a>
-         <div class="dropdown-content">
-
-            <a href="https://cmparks10.github.io/Cheat-Sheet-Page/design.html">Github</a>
-         </div>
+         <a href="design.html" class="dropbtn">System Design and Higher Level Questions</a>
       </li>
-      <li><a href="https://cmparks10.github.io/Cheat-Sheet-Page/javascript.html">javascript</a></li>
-
+      <li class="dropdown">
+         <a href="javascript.html" class="dropbtn">Javascript</a>
+      </li>
+      <li class="dropdown">
+         <a href="csAndLeetCode.html" class="dropbtn">CS and LeetCode</a>
+      </li>
   </ul>
 
 
@@ -219,6 +210,11 @@
          <a href="https://www.wallarm.com/what/oauth-vs-jwt-detailed-comparison">OAuth vs JWT</a>
          <a href="https://stackoverflow.com/questions/39909419/what-are-the-main-differences-between-jwt-and-oauth-authentication">Stack Overflow</a>
          
+      <!-- ============================================ -->
+      <!--            Java                              -->
+      <!-- ============================================ -->
+
+
       </div>
       <div id="java">
       <h2 style="text-align: center";>Java</h2>
@@ -235,16 +231,28 @@
       <li><a href="https://introcs.cs.princeton.edu/java/11cheatsheet/errors.pdf">Compile and Runtime Errors in Java</a></li>
       <li><a href="https://javaconceptoftheday.com/java-array-cheat-sheet/">Java Array Cheat Sheet (This site is great)</a></li>
       <li><a href="https://sde-coursepack.github.io/modules/java/How-Java-Works/">How Java Works</a></li>
+
+
+      <li><a href="https://stackoverflow.com/questions/10839131/implements-vs-extends-when-to-use-whats-the-difference">Implements vs Extends</a></li>
+      <img src="./assets/extendsVsImplements.jpg" alt="">
+         <img src="./assets/fourPillarsOfJava.png" alt=""><br>
+         <a href="https://medium.com/newtechtips/java-oop-what-are-the-four-pillars-55920313a9b4">4 Pillars of Java</a><br>
+      <a href="https://medium.com/@srushti.shingade20/inheritance-vs-polymorphism-7fd7ea2f2fef">Inheritance vs Polymorphism</a>
+      <p>Interfaces vs Abstract Classes</p>
       </ul>
       <img src="./assets/AmigosCodeRoadmap.png" alt="Italian Trulli" class="center"><br>
-      <img src="HowJavaWorks1.png" alt=""><br>
-      <img src="HowJavaWorks2.png" alt=""><br>
-      <img style="width: 1000px; height: auto;"  src="HowJavaWorks3.png" alt="">
-      <img src="JavaMem1.png" alt="">
-      <img style="width: 1000px; height: auto;" src="JavaMem2.png" alt=""><br>
-      <img style="width: 1000px; height: auto;" src="JavaMem3.png" alt="">
+      <img style="width: 800px; height: auto; border-style: solid;" src="HowJavaWorks1.png" alt="">
+      <img style="width: 800px; height: auto; border-style: solid;" src="HowJavaWorks2.png" alt=""><br>
+      <img style="width: 800px; height: auto; border-style: solid;"  src="HowJavaWorks3.png" alt="">
+      <img style="width: 800px; height: auto; border-style: solid;" src="JavaMem1.png" alt="">
+      <img style="width: 800px; height: auto;" src="JavaMem2.png" alt=""><br>
+      <img style="width: 800px; height: auto;" src="JavaMem3.png" alt="">
+      <a href="">java.util.concurrent</a>
+
+      <div>
       <h3>Concurrency</h3>
       <h4>What is it, and what is the difference between Concurrency and Async Programming</h4>
+
       <ol>
       <li><b>Concurrency</b> is a broader concept that refers to the ability to handle multiple tasks apparently at the same time. This can be achieved in two main ways:<br>
       <b>Parallelism:</b> This is where multiple tasks are genuinely running simultaneously on separate processors or cores.<br>
@@ -267,7 +275,14 @@
       <li>Async Programming</li>
       <li>Event Driven Programming</li>
       </ol>
+      </div>
+
+
       <h3>Explain the difference in Array, ArrayLists</h3>
+      <img src="./assets/ArrayVsArrayList1.png" alt="">
+      <img src="./assets/ArrayVsArrayList2.png" alt="">
+
+
       <p><b>Arrays</b> are built in constructs to Java. There is a Arrays library you can import that allows for much better Array manipulation</p>
       <p>An <b>ArrayList</b> is a resizeable array implementation of the list interface,
       which is part of the Java Collections Framework. Unlike Arrays, Arraylist can dynamically grow and shrink in size. Internally, 
